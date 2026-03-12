@@ -17,8 +17,7 @@ const Carousel = () => {
         const response = await axios.get('http://localhost:3001/get-product-recommendations');
         setProducts(response.data);
       } catch (error) {
-        console.error('Error fetching products:', error);
-        setProducts([]);
+        fetchProducts();
       }
     };
 
