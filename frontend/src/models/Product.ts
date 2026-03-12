@@ -17,4 +17,8 @@ export abstract class Product {
   public getPrice(): number {
     return (this.basePrice * (1 - this.discountRate)) * this.taxRate;
   }
+
+  public getPriceWithoutTax(): number {
+    return this.basePrice * (1 - this.discountRate);
+  }
 }
