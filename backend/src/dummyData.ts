@@ -3,13 +3,24 @@ import { Phone } from "./models/Phone";
 import { PlayStation } from "./models/PlayStation";
 import { SSD } from "./models/SSD";
 
+let laptop1 = new Laptop("Laptop Air 13'", "https://s3.eu-north-1.amazonaws.com/foeniks-component-storage-staging/product/b9a19d36-552c-4166-83bc-6633ba7dbe54/65ac89c12f1c3762629555ed/825x550.jpg", 999);
+let laptop2 = new Laptop("Laptop Air 13'", "https://s3.eu-north-1.amazonaws.com/foeniks-component-storage-staging/product/b9a19d36-552c-4166-83bc-6633ba7dbe54/65ac89c12f1c3762629555ed/825x550.jpg", 999);
+let laptop3 = new Laptop("Gaming Laptop GX5", "https://oechsle.vteximg.com.br/arquivos/ids/15396300-1000-1000/image-98b7428fffe440d4b73929922ad34501.jpg?v=638283539680870000", 1499);
+let laptop4 = new Laptop("Laptop UltraSlim 14'", "https://www.elgiganten.dk/image/dv_web_D1800010021478325/618778/hp-laptop-15s-r3-38128-156-barbar-computer--pdp_zoom-3000--pdp_main-540.jpg", 1099);
+let laptop5 = new Laptop("Laptop Workstation W10", "https://pcudlejning.dk/wp-content/uploads/2022/09/Lenovo-Legion-Y540.jpeg", 2599);
+
+laptop1.setDiscountRate(0.15);
+laptop2.setDiscountRate(0.15);
+laptop3.setDiscountRate(0.10);
+laptop4.setDiscountRate(0.05);
+laptop5.setDiscountRate(0.20);
 export const recommendedProducts: (Laptop | Phone | SSD | PlayStation)[] = [
   // Laptops
-  new Laptop("Laptop Pro 16'", "https://i5.walmartimages.com/seo/HP-Stream-14-Laptop-Intel-Celeron-N4000-4GB-SDRAM-32GB-eMMC-Office-365-1-yr-Royal-Blue_4f941fe6-0cf3-42af-a06c-7532138492fc_2.cb8e85270e731cb1ef85d431e49f0bf2.jpeg", 2399),
-  new Laptop("Laptop Air 13'", "https://s3.eu-north-1.amazonaws.com/foeniks-component-storage-staging/product/b9a19d36-552c-4166-83bc-6633ba7dbe54/65ac89c12f1c3762629555ed/825x550.jpg", 999),
-  new Laptop("Gaming Laptop GX5", "https://oechsle.vteximg.com.br/arquivos/ids/15396300-1000-1000/image-98b7428fffe440d4b73929922ad34501.jpg?v=638283539680870000", 1499),
-  new Laptop("Laptop UltraSlim 14'", "https://www.elgiganten.dk/image/dv_web_D1800010021478325/618778/hp-laptop-15s-r3-38128-156-barbar-computer--pdp_zoom-3000--pdp_main-540.jpg", 1099),
-  new Laptop("Laptop Workstation W10", "https://pcudlejning.dk/wp-content/uploads/2022/09/Lenovo-Legion-Y540.jpeg", 2599),
+  laptop1,
+  laptop2,
+  laptop3,
+  laptop4,
+  laptop5,
 
   // Phones
   new Phone("Smartphone X12", "https://www.elgiganten.dk/image/dv_web_D180001002838576/361914/iphone-13-5g-smartphone-128gb-starlight--pdp_zoom-3000--pdp_main-540.jpg", 999),
