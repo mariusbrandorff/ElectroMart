@@ -4,6 +4,7 @@ import { recommendedProducts } from './dummyData';
 const app = express();
 const port = 3001;
 const cors = require('cors');
+const enableUnfinishedFeature = false;
 app.use(cors());
 
 app.use(express.json());
@@ -32,10 +33,12 @@ app.get("/get-products-by-category", (req: Request, res: Response) => {
   return res.json(products);
 });
 
-app.get("/unfinished-feature", (_: Request, res: Response) => {
-  // Oh no, this feature is not ready for production!
-  return res.status(500).send('Internal Server Error');
-});
+if (enableUnfinishedFeature) {
+    app.get("/unfinished-feature", (_: Request, res: Response) => {
+      // Oh no, this feature is not ready for production!
+      return res.status(500).send('Internal Server Error');
+    });
+}
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
